@@ -1,0 +1,42 @@
+name: License detection
+description: TPD reports the wrong license for a package, or can't determine one it should.
+labels: [license-detection]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        TPD names a license only when the evidence names it, and reports "not determined" otherwise; that is by design for vague declarations such as "BSD" or "Dual License".
+        This form is for a license TPD gets wrong, or one the package declares or ships unambiguously and TPD still misses.
+  - type: input
+    id: package
+    attributes:
+      label: Package
+      description: Ecosystem, name and exact version, e.g. NuGet Serilog 4.2.0.
+    validations:
+      required: true
+  - type: textarea
+    id: reported
+    attributes:
+      label: What TPD reports
+      description: The package's entry in ATTRIBUTION.txt or packages.json, and any warning about it.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What the license is, and the evidence
+      description: The package's license declaration or license file (a link to it in the registry or repository).
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command line
+      render: shell
+  - type: input
+    id: version
+    attributes:
+      label: TPD version
+      description: Output of `thirdpartydetective --version`.
+    validations:
+      required: true

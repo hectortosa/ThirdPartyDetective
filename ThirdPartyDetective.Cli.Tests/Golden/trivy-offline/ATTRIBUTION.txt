@@ -1,0 +1,65 @@
+THIRD PARTY SOFTWARE NOTICES AND INFORMATION
+============================================================
+
+This software incorporates components from the projects listed below.
+Generated on <timestamp> UTC
+
+1. Antlr 3.5.0.2
+   License: not determined (NOASSERTION)
+
+------------------------------------------------------------
+
+2. Humanizer.Core 2.2.0
+   License: not determined (NOASSERTION)
+
+------------------------------------------------------------
+
+3. Newtonsoft.Json 13.0.3
+   License: not determined (NOASSERTION)
+
+------------------------------------------------------------
+
+4. Npgsql 9.0.3
+   License: not determined (NOASSERTION)
+
+------------------------------------------------------------
+
+5. OpenTelemetry 1.15.3
+   License: not determined (NOASSERTION)
+
+------------------------------------------------------------
+
+6. OpenTelemetry.Api 1.15.3
+   License: not determined (NOASSERTION)
+
+------------------------------------------------------------
+
+7. OpenTelemetry.Api.ProviderBuilderExtensions 1.15.3
+   License: not determined (NOASSERTION)
+
+------------------------------------------------------------
+
+8. OpenTelemetry.Exporter.Prometheus.AspNetCore 1.15.3-beta.1
+   License: not determined (NOASSERTION)
+
+------------------------------------------------------------
+
+9. Polly.Core 8.5.2
+   License: not determined (NOASSERTION)
+
+------------------------------------------------------------
+
+10. Serilog 4.2.0
+   License: not determined (NOASSERTION)
+
+------------------------------------------------------------
+
+
+============================================================
+APPENDIX A: LICENSE TEXTS
+============================================================
+
+The following license texts apply to the packages listed above.
+Texts are sourced from the SPDX license-list-data repository (https://github.com/spdx/license-list-data),
+except LicenseRef-* texts, which come from the SBOM or the package (shown indented).
+

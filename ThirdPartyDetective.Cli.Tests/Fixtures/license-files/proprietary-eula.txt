@@ -1,0 +1,5 @@
+CONTOSO END USER LICENSE AGREEMENT
+
+Copyright (c) Contoso Ltd. All rights reserved.
+
+This software is licensed, not sold. You may install and use one copy of the software on a single device. You may not copy, modify, distribute, sell, sublicense or reverse engineer the software, except as expressly permitted by applicable law. Redistribution in source or binary form requires the prior written permission of Contoso Ltd. The software is provided as is, without warranty of any kind, and Contoso Ltd. shall not be liable for any damages arising from its use. This agreement is governed by the laws of the State of Washington.

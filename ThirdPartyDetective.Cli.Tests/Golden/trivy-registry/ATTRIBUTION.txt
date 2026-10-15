@@ -1,0 +1,105 @@
+THIRD PARTY SOFTWARE NOTICES AND INFORMATION
+============================================================
+
+This software incorporates components from the projects listed below.
+Generated on <timestamp> UTC
+
+1. Antlr 3.5.0.2
+   Authors: Sam Harwell, Terence Parr
+   License: not determined (NOASSERTION)
+   License URL: http://www.antlr3.org/license.html
+
+------------------------------------------------------------
+
+2. Humanizer.Core 2.2.0
+   Copyright: Copyright 2012-2016
+   License: not determined (NOASSERTION)
+   License URL: https://raw.githubusercontent.com/Humanizr/Humanizer/master/LICENSE
+
+------------------------------------------------------------
+
+3. Newtonsoft.Json 13.0.3
+   Copyright: Copyright © James Newton-King 2008
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+4. Npgsql 9.0.3
+   Copyright: Copyright 2024 © The Npgsql Development Team
+   License: PostgreSQL (see Appendix A)
+   License URL: https://licenses.nuget.org/PostgreSQL
+
+------------------------------------------------------------
+
+5. OpenTelemetry 1.15.3
+   Copyright: Copyright The OpenTelemetry Authors
+   License: Apache-2.0 (see Appendix A)
+   License URL: https://licenses.nuget.org/Apache-2.0
+
+------------------------------------------------------------
+
+6. OpenTelemetry.Api 1.15.3
+   Copyright: Copyright The OpenTelemetry Authors
+   License: Apache-2.0 (see Appendix A)
+   License URL: https://licenses.nuget.org/Apache-2.0
+
+------------------------------------------------------------
+
+7. OpenTelemetry.Api.ProviderBuilderExtensions 1.15.3
+   Copyright: Copyright The OpenTelemetry Authors
+   License: Apache-2.0 (see Appendix A)
+   License URL: https://licenses.nuget.org/Apache-2.0
+
+------------------------------------------------------------
+
+8. OpenTelemetry.Exporter.Prometheus.AspNetCore 1.15.3-beta.1
+   Copyright: Copyright The OpenTelemetry Authors
+   License: Apache-2.0 (see Appendix A)
+   License URL: https://licenses.nuget.org/Apache-2.0
+
+------------------------------------------------------------
+
+9. Polly.Core 8.5.2
+   Copyright: Copyright (c) 2025, App vNext
+   License: BSD-3-Clause (see Appendix A)
+   License URL: https://licenses.nuget.org/BSD-3-Clause
+
+------------------------------------------------------------
+
+10. Serilog 4.2.0
+   Copyright: Copyright © Serilog Contributors
+   License: Apache-2.0 (see Appendix A)
+   License URL: https://licenses.nuget.org/Apache-2.0
+
+------------------------------------------------------------
+
+
+============================================================
+APPENDIX A: LICENSE TEXTS
+============================================================
+
+The following license texts apply to the packages listed above.
+Texts are sourced from the SPDX license-list-data repository (https://github.com/spdx/license-list-data),
+except LicenseRef-* texts, which come from the SBOM or the package (shown indented).
+
+--- Apache-2.0 ---
+
+[SPDX 3.29.0 text of Apache-2.0]
+
+
+--- BSD-3-Clause ---
+
+[SPDX 3.29.0 text of BSD-3-Clause]
+
+
+--- MIT ---
+
+[SPDX 3.29.0 text of MIT]
+
+
+--- PostgreSQL ---
+
+[SPDX 3.29.0 text of PostgreSQL]
+
+

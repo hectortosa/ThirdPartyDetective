@@ -1,0 +1,186 @@
+name: Release
+
+# Step 1 of 2. A version tag builds a standalone executable for each platform and
+# creates a DRAFT GitHub release holding the archives, the executables' SBOMs,
+# THIRD-PARTY-NOTICES.txt and SHA256SUMS, with build provenance attestations.
+# Nothing is published here: after reviewing the draft, run the Publish workflow.
+#
+# Run it by hand (Actions > Release > Run workflow) for a dry run: it builds and
+# checks everything and keeps the files as workflow artifacts, without a release.
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  # Tests once, and checks a tag matches <Version> and is on main.
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0 # to check the tag is on main
+          persist-credentials: false
+
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+
+      - name: Version
+        id: version
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          VERSION=$(dotnet msbuild ThirdPartyDetective.Cli/ThirdPartyDetective.Cli.csproj -getProperty:Version)
+          if [ "$GITHUB_EVENT_NAME" = push ]; then
+            if [ "${TAG#v}" != "$VERSION" ]; then
+              echo "::error::Tag $TAG does not match <Version> $VERSION in Directory.Build.props."
+              exit 1
+            fi
+            if ! git merge-base --is-ancestor "$GITHUB_SHA" origin/main; then
+              echo "::error::Tag $TAG points at a commit that is not on main."
+              exit 1
+            fi
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Test
+        run: dotnet test ThirdPartyDetective.sln --configuration Release
+
+  # One job per platform, on a runner of that platform, so each executable is run
+  # where it is built. Restores and builds only: no downloaded scanner and no
+  # networked tool executes in the jobs that produce the executables.
+  build:
+    needs: verify
+    strategy:
+      fail-fast: true
+      matrix:
+        include:
+          - { rid: linux-x64, os: ubuntu-24.04, exe: thirdpartydetective }
+          - { rid: linux-arm64, os: ubuntu-24.04-arm, exe: thirdpartydetective }
+          - { rid: osx-arm64, os: macos-15, exe: thirdpartydetective } # a macOS build signs the executable, as Apple silicon requires
+          - { rid: osx-x64, os: macos-15-intel, exe: thirdpartydetective }
+          - { rid: win-x64, os: windows-2025, exe: thirdpartydetective.exe }
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+    env:
+      RID: ${{ matrix.rid }}
+      EXE: ${{ matrix.exe }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+
+      - name: Build the executable and its archive
+        run: scripts/build-standalone.sh "$RID" dist
+
+      # The reference keeps ICU on, so the check also covers invariant globalization.
+      - name: Same reports as the framework-dependent build
+        run: |
+          set -euo pipefail
+          dotnet build ThirdPartyDetective.Cli/ThirdPartyDetective.Cli.csproj --configuration Release \
+            -p:InvariantGlobalization=false --output "$RUNNER_TEMP/reference" --nologo
+          mkdir -p "$RUNNER_TEMP/standalone"
+          case "$RID" in
+            win-*) 7z e dist/*.zip "-o$RUNNER_TEMP/standalone" "$EXE" -bso0 ;;
+            *) tar -xzf dist/*.tar.gz -C "$RUNNER_TEMP/standalone" "$EXE" ;;
+          esac
+          "$RUNNER_TEMP/standalone/$EXE" --version
+          scripts/check-standalone.sh "$RUNNER_TEMP/reference/ThirdPartyDetective.dll" "$RUNNER_TEMP/standalone/$EXE"
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: archive-${{ matrix.rid }}
+          path: dist/*
+          if-no-files-found: error
+
+  # The executables' SBOMs and the third-party notices (Trivy + TPD with registry
+  # fallback). The archives carry the committed THIRD-PARTY-NOTICES.txt; this job
+  # proves it is still accurate for the tagged dependencies.
+  notices:
+    needs: verify
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+
+      - uses: aquasecurity/setup-trivy@81e514348e19b6112ce2a7e3ecbafe19c1e1f567 # v0.3.1
+        with:
+          version: v0.75.0
+
+      - name: SBOMs and third-party notices
+        env:
+          VERSION: ${{ needs.verify.outputs.version }}
+        run: |
+          set -euo pipefail
+          mkdir -p notices
+          scripts/generate-third-party-notices.sh notices/THIRD-PARTY-NOTICES.txt
+          diff -u THIRD-PARTY-NOTICES.txt notices/THIRD-PARTY-NOTICES.txt
+          for rid in linux-x64 linux-arm64 osx-x64 osx-arm64 win-x64; do
+            scripts/generate-sbom.sh "$rid" "notices/thirdpartydetective_${VERSION}_${rid}.spdx.json"
+          done
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: notices
+          path: notices/
+          if-no-files-found: error
+
+  draft-release:
+    if: github.event_name == 'push'
+    needs: [build, notices]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write # to create the draft release
+      id-token: write # to sign the provenance attestation
+      attestations: write # to store it
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          path: assets
+          merge-multiple: true
+
+      - name: Checksums
+        run: |
+          set -euo pipefail
+          cd assets
+          shopt -s nullglob
+          archives=(thirdpartydetective_*_*.tar.gz thirdpartydetective_*_*.zip)
+          [ "${#archives[@]}" -eq 5 ] || { echo "::error::Expected 5 archives, found ${#archives[@]}"; ls -la; exit 1; }
+          sha256sum -- * > SHA256SUMS
+          cat SHA256SUMS
+
+      # Provenance for every file listed in SHA256SUMS; verify with
+      # gh attestation verify <file> --repo <owner>/<repo>.
+      - uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-checksums: assets/SHA256SUMS
+
+      - name: Create draft release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.ref_name }}
+        run: gh release create "$TAG" assets/* --draft --verify-tag --title "$TAG" --generate-notes

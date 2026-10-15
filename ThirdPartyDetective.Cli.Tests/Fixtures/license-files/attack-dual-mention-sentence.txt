@@ -1,0 +1,1 @@
+This project is dual licensed under the MIT license or the GNU General Public License version 3, at your option. See the files LICENSE-MIT and LICENSE-GPL for the full texts. Contributions are accepted under the same terms.

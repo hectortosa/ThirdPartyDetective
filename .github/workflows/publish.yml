@@ -1,0 +1,59 @@
+name: Publish
+
+# Step 2 of 2, run by hand after reviewing a draft release made by the Release
+# workflow. Verifies every asset of the draft against its SHA256SUMS and its
+# build provenance (made by release.yml from that tag), then publishes the
+# release. It needs no secrets.
+#
+# Configuration (Settings > Environments > release):
+#   deployment branches: main only; required reviewer: the maintainer
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to publish, e.g. v1.0.0
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    environment: release
+    permissions:
+      contents: write # to publish the draft release
+      attestations: read # to verify the assets' provenance
+    steps:
+      - name: Download and verify the release assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+          [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "::error::Not a release tag: $TAG"; exit 1; }
+          gh release download "$TAG" --dir assets
+          cd assets
+          sha256sum --check --strict SHA256SUMS
+          # Every asset must be listed, built by this repository's Release
+          # workflow from this tag on a GitHub-hosted runner.
+          for f in *; do
+            [ "$f" = SHA256SUMS ] && continue
+            grep -q "  $f\$" SHA256SUMS || { echo "::error::$f is not listed in SHA256SUMS"; exit 1; }
+            gh attestation verify "$f" --repo "$GH_REPO" \
+              --signer-workflow "$GH_REPO/.github/workflows/release.yml" \
+              --source-ref "refs/tags/$TAG" --deny-self-hosted-runners
+          done
+          shopt -s nullglob
+          archives=(thirdpartydetective_*_*.tar.gz thirdpartydetective_*_*.zip)
+          [ "${#archives[@]}" -eq 5 ] || { echo "::error::Expected 5 archives, found ${#archives[@]}"; exit 1; }
+
+      - name: Publish the GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ inputs.tag }}
+        run: gh release edit "$TAG" --draft=false

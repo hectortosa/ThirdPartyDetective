@@ -1,0 +1,1 @@
+Portions of this product are licensed under the GNU Lesser General Public License version 2.1; all other rights are reserved by Contoso Ltd. You may not copy, modify, distribute or reverse engineer the software except as permitted by applicable law. Redistribution in any form requires the prior written permission of Contoso Ltd.

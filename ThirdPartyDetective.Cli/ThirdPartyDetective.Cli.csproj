@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>ThirdPartyDetective.Cli</RootNamespace>
+    <AssemblyName>ThirdPartyDetective</AssemblyName>
+    <Authors>ThirdPartyDetective Contributors</Authors>
+    <Description>Multi-source SPDX SBOM license-policy linter for SaaS / Distribution deployment models</Description>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>thirdpartydetective</ToolCommandName>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Reports are culture-independent, so the tool needs no ICU: the standalone
+         binaries then run on Linux hosts without libicu. -->
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/hectortosa/ThirdPartyDetective</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hectortosa/ThirdPartyDetective</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="ThirdPartyDetective.Cli.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- SPDX license list (IDs and texts); rebuild with scripts/update-spdx-license-list.sh. -->
+    <EmbeddedResource Include="Resources\spdx-license-list.tar.gz" LogicalName="spdx-license-list.tar.gz" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\LICENSE" Pack="true" PackagePath="\" />
+    <!-- Notices for the dependency assemblies bundled in the tool package;
+         regenerate with scripts/generate-third-party-notices.sh. -->
+    <None Include="..\THIRD-PARTY-NOTICES.txt" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.13" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.13" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.13" />
+    <PackageReference Include="System.CommandLine" Version="2.0.13" />
+  </ItemGroup>
+
+</Project>

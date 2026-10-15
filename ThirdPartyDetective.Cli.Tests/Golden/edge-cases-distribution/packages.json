@@ -1,0 +1,1128 @@
+{
+  "packages": [
+    {
+      "name": "Aardvark.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "MIT",
+      "licenseType": "MIT",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": true,
+      "warningFlags": [],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MIT"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "Agpl.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "AGPL-3.0-only",
+      "licenseType": "AGPL30",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "AGPL license detected - requires source code disclosure for network use"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "AGPL-3.0-only"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "alpha.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "MIT",
+      "licenseType": "MIT",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": true,
+      "warningFlags": [],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MIT"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "Apache.WithLlvm",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "Apache-2.0 WITH LLVM-exception",
+      "licenseType": "Apache20",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": true,
+      "warningFlags": [
+        "License has exception clause: WITH LLVM-exception; verify exception scope"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "Apache-2.0"
+      ],
+      "licenseExceptions": [
+        "LLVM-exception"
+      ],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "App.Purpose.Dependency",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "GPL-3.0-only",
+      "licenseType": "GPL30",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "GPL license detected - may require source code disclosure"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "GPL-3.0-only"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "BlueOak.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "BlueOak-1.0.0",
+      "licenseType": "MIT",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": true,
+      "warningFlags": [],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "BlueOak-1.0.0"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "Boost.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "BSL-1.0",
+      "licenseType": "Unknown",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Unknown license - manual review required"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "BSL-1.0"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "Combined.AndLicensed",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "MIT AND BSD-3-Clause",
+      "licenseType": "Multiple",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Multiple licenses - requires individual analysis"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MIT",
+        "BSD-3-Clause"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "Dual.OrLicensed",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "Copyright (c) Dual Authors",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "MIT OR Apache-2.0",
+      "licenseType": "Multiple",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Multiple licenses - requires individual analysis"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MIT",
+        "Apache-2.0"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "Files.Only",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "MIT AND GPL-3.0-only",
+      "licenseType": "Multiple",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Multiple licenses - requires individual analysis",
+        "Compound license includes GPL (GPL-3.0-only) - may require source code disclosure"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MIT",
+        "GPL-3.0-only"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "Gpl.WithClasspath",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": "https://example.invalid/gpl-classpath",
+      "licenseUrl": null,
+      "licenseExpression": "GPL-2.0-only WITH Classpath-exception-2.0",
+      "licenseType": "GPL20",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "License has exception clause: WITH Classpath-exception-2.0; verify exception scope",
+        "GPL license detected - may require source code disclosure"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "GPL-2.0-only"
+      ],
+      "licenseExceptions": [
+        "Classpath-exception-2.0"
+      ],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "Gpl3.OrLater",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": "https://example.invalid/gpl3",
+      "licenseUrl": null,
+      "licenseExpression": "GPL-3.0-or-later",
+      "licenseType": "GPL30",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "GPL license detected - may require source code disclosure"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "GPL-3.0-or-later"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "left-pad",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "WTFPL",
+      "licenseType": "Unknown",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Unknown license - manual review required"
+      ],
+      "sourceEcosystem": "npm",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "WTFPL"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "Lgpl.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": "https://example.invalid/lgpl",
+      "licenseUrl": null,
+      "licenseExpression": "LGPL-2.1-only",
+      "licenseType": "LGPL21",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": true,
+      "warningFlags": [],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "LGPL-2.1-only"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "Lowercase.Operators",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "mit OR apache-2.0",
+      "licenseType": "Multiple",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Multiple licenses - requires individual analysis"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "mit",
+        "apache-2.0"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "Made.Up.License",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "Made-Up-License-1.0",
+      "licenseType": "Unknown",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Unknown license - manual review required"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "Made-Up-License-1.0"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "MitZero.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "MIT-0",
+      "licenseType": "MIT",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": true,
+      "warningFlags": [],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MIT-0"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "Mpl.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "MPL-2.0",
+      "licenseType": "MPL20",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": true,
+      "warningFlags": [],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MPL-2.0"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "MsPl.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "MS-PL",
+      "licenseType": "MIT",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": true,
+      "warningFlags": [],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MS-PL"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "Nested.Expression",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "(MIT OR Apache-2.0) AND BSD-2-Clause",
+      "licenseType": "Multiple",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Multiple licenses - requires individual analysis"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MIT",
+        "Apache-2.0",
+        "BSD-2-Clause"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "No.License",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": null,
+      "licenseType": "Unknown",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Unknown license - manual review required",
+        "No license information available"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "None",
+      "isViolation": true
+    },
+    {
+      "name": "None.License",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": null,
+      "licenseType": "Unknown",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Unknown license - manual review required",
+        "No license information available"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "None",
+      "isViolation": true
+    },
+    {
+      "name": "Plain.Mit",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "Plain Inc",
+      "copyright": "Copyright (c) 2020 Plain Inc",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "MIT",
+      "licenseType": "MIT",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": true,
+      "warningFlags": [],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MIT"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "Postgres.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "PostgreSQL",
+      "licenseType": "MIT",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": true,
+      "warningFlags": [],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "PostgreSQL"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "Psf.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "PSF-2.0",
+      "licenseType": "MIT",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": true,
+      "warningFlags": [],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "PSF-2.0"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "Unlicense.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "Unlicense",
+      "licenseType": "Unlicense",
+      "licenseText": null,
+      "requiresAttribution": false,
+      "saasCompliant": true,
+      "warningFlags": [],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "Unlicense"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "Vendor.Proprietary",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "Copyright (c) Vendor Ltd",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "LicenseRef-Vendor-EULA",
+      "licenseType": "Unknown",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Unknown license - manual review required"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "LicenseRef-Vendor-EULA"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [
+        {
+          "licenseId": "LicenseRef-Vendor-EULA",
+          "name": "Vendor EULA",
+          "extractedText": "Vendor Ltd End User License Agreement. Redistribution requires written permission."
+        }
+      ],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "ZeroBsd.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "0BSD",
+      "licenseType": "BSD2Clause",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": true,
+      "warningFlags": [],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "0BSD"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "_underscore.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "MIT",
+      "licenseType": "MIT",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": true,
+      "warningFlags": [],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MIT"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    },
+    {
+      "name": "\u00C5ngstr\u00F6m.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "MIT",
+      "licenseType": "MIT",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": true,
+      "warningFlags": [],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MIT"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": false
+    }
+  ],
+  "violations": [
+    {
+      "name": "Agpl.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "AGPL-3.0-only",
+      "licenseType": "AGPL30",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "AGPL license detected - requires source code disclosure for network use"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "AGPL-3.0-only"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "Boost.Package",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "BSL-1.0",
+      "licenseType": "Unknown",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Unknown license - manual review required"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "BSL-1.0"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "Combined.AndLicensed",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "MIT AND BSD-3-Clause",
+      "licenseType": "Multiple",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Multiple licenses - requires individual analysis"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MIT",
+        "BSD-3-Clause"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "Dual.OrLicensed",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "Copyright (c) Dual Authors",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "MIT OR Apache-2.0",
+      "licenseType": "Multiple",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Multiple licenses - requires individual analysis"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MIT",
+        "Apache-2.0"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "Files.Only",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "MIT AND GPL-3.0-only",
+      "licenseType": "Multiple",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Multiple licenses - requires individual analysis",
+        "Compound license includes GPL (GPL-3.0-only) - may require source code disclosure"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MIT",
+        "GPL-3.0-only"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "left-pad",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "WTFPL",
+      "licenseType": "Unknown",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Unknown license - manual review required"
+      ],
+      "sourceEcosystem": "npm",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "WTFPL"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "Lowercase.Operators",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "mit OR apache-2.0",
+      "licenseType": "Multiple",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Multiple licenses - requires individual analysis"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "mit",
+        "apache-2.0"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "Made.Up.License",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "Made-Up-License-1.0",
+      "licenseType": "Unknown",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Unknown license - manual review required"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "Made-Up-License-1.0"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "Nested.Expression",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "(MIT OR Apache-2.0) AND BSD-2-Clause",
+      "licenseType": "Multiple",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Multiple licenses - requires individual analysis"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "MIT",
+        "Apache-2.0",
+        "BSD-2-Clause"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    },
+    {
+      "name": "No.License",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": null,
+      "licenseType": "Unknown",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Unknown license - manual review required",
+        "No license information available"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "None",
+      "isViolation": true
+    },
+    {
+      "name": "None.License",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": null,
+      "licenseType": "Unknown",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Unknown license - manual review required",
+        "No license information available"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [],
+      "licenseExceptions": [],
+      "extractedLicenses": [],
+      "licenseSource": "None",
+      "isViolation": true
+    },
+    {
+      "name": "Vendor.Proprietary",
+      "version": "1.0.0",
+      "description": "",
+      "authors": "",
+      "copyright": "Copyright (c) Vendor Ltd",
+      "projectUrl": null,
+      "licenseUrl": null,
+      "licenseExpression": "LicenseRef-Vendor-EULA",
+      "licenseType": "Unknown",
+      "licenseText": null,
+      "requiresAttribution": true,
+      "saasCompliant": false,
+      "warningFlags": [
+        "Unknown license - manual review required"
+      ],
+      "sourceEcosystem": "NuGet",
+      "sourceProjects": [],
+      "licenseSubExpressions": [
+        "LicenseRef-Vendor-EULA"
+      ],
+      "licenseExceptions": [],
+      "extractedLicenses": [
+        {
+          "licenseId": "LicenseRef-Vendor-EULA",
+          "name": "Vendor EULA",
+          "extractedText": "Vendor Ltd End User License Agreement. Redistribution requires written permission."
+        }
+      ],
+      "licenseSource": "Spdx",
+      "isViolation": true
+    }
+  ],
+  "summary": {
+    "totalPackages": 30,
+    "packagesRequiringAttribution": 29,
+    "warningCount": 21,
+    "licenseTypeCounts": {
+      "MIT": 10,
+      "AGPL30": 1,
+      "Apache20": 1,
+      "GPL30": 2,
+      "Unknown": 6,
+      "Multiple": 5,
+      "GPL20": 1,
+      "LGPL21": 1,
+      "MPL20": 1,
+      "Unlicense": 1,
+      "BSD2Clause": 1
+    },
+    "documentWarnings": [
+      "26 of 29 attribution-required packages have no copyright/author metadata. This is typical for Syft/Trivy SBOMs. Run with --registry-fallback to fetch from package registries, or populate .tpd-overrides.json for packages requiring legal review."
+    ],
+    "unresolvedLicenses": [
+      "No.License@1.0.0",
+      "None.License@1.0.0"
+    ],
+    "missingLicenseTexts": [
+      "Made-Up-License-1.0"
+    ]
+  },
+  "generatedAt": "<timestamp>",
+  "scanPath": "<tests>/Fixtures/spdx/license-edge-cases.spdx.json",
+  "mode": "Distribution"
+}
