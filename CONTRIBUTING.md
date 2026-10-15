@@ -1,6 +1,6 @@
 # Contributing to ThirdPartyDetective
 
-Thanks for your interest in contributing! This is a small project, and the workflow is intentionally simple.
+Thanks for your interest in ThirdPartyDetective. Outside contributions start as issues: only the repository's collaborators can open pull requests.
 
 Coding agents: the repository's instructions for you are in [AGENTS.md](AGENTS.md).
 
@@ -35,12 +35,19 @@ SPDX SBOM(s) → SpdxSbomReader → SbomMerger
 
 Pipeline stages communicate through `ThirdPartyInfo` (the universal package model in `Models/ThirdPartyInfo.cs`). New ecosystems / new sources of truth slot into the pipeline; they don't touch the core classification logic.
 
-## Submitting changes
+## Contributing changes
 
-1. Open an issue first if it's a non-trivial change: a quick sanity check on the design saves rework.
-2. Branch from `main`, make your change, add tests if you've added or changed behavior.
-3. `dotnet test` must pass.
-4. Open a PR. Keep commits focused: one concern per commit, using [Conventional Commits](https://www.conventionalcommits.org/) (`feat:`, `fix:`, `chore:`, ...).
+If you are not a collaborator, open an issue:
+
+- **A bug, or a license TPD gets wrong:** use the bug report or the license detection form. A minimal SBOM that reproduces it is the most useful thing to attach (see [Reporting bugs](#reporting-bugs)).
+- **An idea or a change you would like:** open a feature request that describes the problem. If it fits the project, the maintainer implements it or asks you to contribute it.
+- **A vulnerability:** report it privately, as [SECURITY.md](SECURITY.md) describes.
+
+Collaborators:
+
+1. Branch from `main`, make the change, and add tests for new or changed behavior.
+2. `dotnet test` must pass.
+3. Open a pull request; it merges once CI is green. Keep commits focused: one concern per commit, using [Conventional Commits](https://www.conventionalcommits.org/) (`feat:`, `fix:`, `chore:`, ...).
 
 ## What we look for
 
