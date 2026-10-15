@@ -191,8 +191,10 @@ public class RegistryFallbackEnricher : IRegistryFallbackEnricher
             _logger.LogDebug("Cache hit for {Name}@{Version}: license={License}, url={Url}",
                 pkg.Name, pkg.Version, rawLicense ?? "(null)", rawUrl ?? "(null)");
         else
-            _logger.LogInformation("Resolved {Name}@{Version} from {Ecosystem} registry: license={License}, url={Url}, authors={Authors}",
-                pkg.Name, pkg.Version, ecosystem, rawLicense ?? "(null)", rawUrl ?? "(null)", rawAuthors ?? "(null)");
+            // Authors are left out: registries give them with email addresses, which
+            // belong in the reports, not in every CI job log.
+            _logger.LogInformation("Resolved {Name}@{Version} from {Ecosystem} registry: license={License}, url={Url}",
+                pkg.Name, pkg.Version, ecosystem, rawLicense ?? "(null)", rawUrl ?? "(null)");
     }
 
     // Turns a registry answer into a cache entry: an exact license URL counts as an
