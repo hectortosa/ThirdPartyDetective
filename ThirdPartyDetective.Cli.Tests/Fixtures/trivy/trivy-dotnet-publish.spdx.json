@@ -1,0 +1,524 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "publish",
+  "documentNamespace": "http://trivy.dev/filesystem/publish-f848f3d7-e639-465c-adef-b864f795dc31",
+  "creationInfo": {
+    "creators": [
+      "Organization: aquasecurity",
+      "Tool: trivy-0.75.0"
+    ],
+    "created": "2026-10-07T19:32:32Z"
+  },
+  "packages": [
+    {
+      "name": "Contoso.Web.deps.json",
+      "SPDXID": "SPDXRef-Application-de5f3d87dff59e41",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "primaryPackagePurpose": "APPLICATION",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "Class: lang-pkgs"
+        },
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "Type: dotnet-core"
+        }
+      ]
+    },
+    {
+      "name": "Antlr",
+      "SPDXID": "SPDXRef-Package-b2f3eff2cf6f6517",
+      "versionInfo": "3.5.0.2",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: Contoso.Web.deps.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Antlr@3.5.0.2"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgID: Antlr/3.5.0.2"
+        },
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: dotnet-core"
+        }
+      ]
+    },
+    {
+      "name": "Contoso.Billing",
+      "SPDXID": "SPDXRef-Package-b68bedf7c2d74b93",
+      "versionInfo": "1.0.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: Contoso.Web.deps.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Contoso.Billing@1.0.0"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgID: Contoso.Billing/1.0.0"
+        },
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: dotnet-core"
+        }
+      ]
+    },
+    {
+      "name": "Contoso.Web",
+      "SPDXID": "SPDXRef-Package-a955470b45becf58",
+      "versionInfo": "1.0.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: Contoso.Web.deps.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Contoso.Web@1.0.0"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgID: Contoso.Web/1.0.0"
+        },
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: dotnet-core"
+        }
+      ]
+    },
+    {
+      "name": "Humanizer.Core",
+      "SPDXID": "SPDXRef-Package-589655af4d80edc6",
+      "versionInfo": "2.2.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: Contoso.Web.deps.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Humanizer.Core@2.2.0"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgID: Humanizer.Core/2.2.0"
+        },
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: dotnet-core"
+        }
+      ]
+    },
+    {
+      "name": "Newtonsoft.Json",
+      "SPDXID": "SPDXRef-Package-f6447bd724e78003",
+      "versionInfo": "13.0.3",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: Contoso.Web.deps.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Newtonsoft.Json@13.0.3"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgID: Newtonsoft.Json/13.0.3"
+        },
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: dotnet-core"
+        }
+      ]
+    },
+    {
+      "name": "Npgsql",
+      "SPDXID": "SPDXRef-Package-cbeffd2797880725",
+      "versionInfo": "9.0.3",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: Contoso.Web.deps.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Npgsql@9.0.3"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgID: Npgsql/9.0.3"
+        },
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: dotnet-core"
+        }
+      ]
+    },
+    {
+      "name": "OpenTelemetry",
+      "SPDXID": "SPDXRef-Package-b00c4bf1299a6643",
+      "versionInfo": "1.15.3",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: Contoso.Web.deps.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/OpenTelemetry@1.15.3"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgID: OpenTelemetry/1.15.3"
+        },
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: dotnet-core"
+        }
+      ]
+    },
+    {
+      "name": "OpenTelemetry.Api",
+      "SPDXID": "SPDXRef-Package-17b78899496af668",
+      "versionInfo": "1.15.3",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: Contoso.Web.deps.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/OpenTelemetry.Api@1.15.3"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgID: OpenTelemetry.Api/1.15.3"
+        },
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: dotnet-core"
+        }
+      ]
+    },
+    {
+      "name": "OpenTelemetry.Api.ProviderBuilderExtensions",
+      "SPDXID": "SPDXRef-Package-1ccc4d34e883b424",
+      "versionInfo": "1.15.3",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: Contoso.Web.deps.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/OpenTelemetry.Api.ProviderBuilderExtensions@1.15.3"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgID: OpenTelemetry.Api.ProviderBuilderExtensions/1.15.3"
+        },
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: dotnet-core"
+        }
+      ]
+    },
+    {
+      "name": "OpenTelemetry.Exporter.Prometheus.AspNetCore",
+      "SPDXID": "SPDXRef-Package-befd02bbd8173659",
+      "versionInfo": "1.15.3-beta.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: Contoso.Web.deps.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/OpenTelemetry.Exporter.Prometheus.AspNetCore@1.15.3-beta.1"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgID: OpenTelemetry.Exporter.Prometheus.AspNetCore/1.15.3-beta.1"
+        },
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: dotnet-core"
+        }
+      ]
+    },
+    {
+      "name": "Polly.Core",
+      "SPDXID": "SPDXRef-Package-2c7a9ef2eacb1a1",
+      "versionInfo": "8.5.2",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: Contoso.Web.deps.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Polly.Core@8.5.2"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgID: Polly.Core/8.5.2"
+        },
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: dotnet-core"
+        }
+      ]
+    },
+    {
+      "name": "Serilog",
+      "SPDXID": "SPDXRef-Package-8f2621dd51d8260a",
+      "versionInfo": "4.2.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "sourceInfo": "package found in: Contoso.Web.deps.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Serilog@4.2.0"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgID: Serilog/4.2.0"
+        },
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "PkgType: dotnet-core"
+        }
+      ]
+    },
+    {
+      "name": "publish",
+      "SPDXID": "SPDXRef-Filesystem-b205bc230ca068d2",
+      "downloadLocation": "NONE",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "primaryPackagePurpose": "SOURCE",
+      "annotations": [
+        {
+          "annotator": "Tool: trivy-0.75.0",
+          "annotationDate": "2026-10-07T19:32:32Z",
+          "annotationType": "OTHER",
+          "comment": "SchemaVersion: 2"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-Application-de5f3d87dff59e41",
+      "relatedSpdxElement": "SPDXRef-Package-a955470b45becf58",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-Filesystem-b205bc230ca068d2",
+      "relationshipType": "DESCRIBES"
+    },
+    {
+      "spdxElementId": "SPDXRef-Filesystem-b205bc230ca068d2",
+      "relatedSpdxElement": "SPDXRef-Application-de5f3d87dff59e41",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-1ccc4d34e883b424",
+      "relatedSpdxElement": "SPDXRef-Package-17b78899496af668",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-a955470b45becf58",
+      "relatedSpdxElement": "SPDXRef-Package-2c7a9ef2eacb1a1",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-a955470b45becf58",
+      "relatedSpdxElement": "SPDXRef-Package-589655af4d80edc6",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-a955470b45becf58",
+      "relatedSpdxElement": "SPDXRef-Package-8f2621dd51d8260a",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-a955470b45becf58",
+      "relatedSpdxElement": "SPDXRef-Package-b2f3eff2cf6f6517",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-a955470b45becf58",
+      "relatedSpdxElement": "SPDXRef-Package-b68bedf7c2d74b93",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-a955470b45becf58",
+      "relatedSpdxElement": "SPDXRef-Package-befd02bbd8173659",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-a955470b45becf58",
+      "relatedSpdxElement": "SPDXRef-Package-cbeffd2797880725",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-b00c4bf1299a6643",
+      "relatedSpdxElement": "SPDXRef-Package-1ccc4d34e883b424",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-b68bedf7c2d74b93",
+      "relatedSpdxElement": "SPDXRef-Package-f6447bd724e78003",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-befd02bbd8173659",
+      "relatedSpdxElement": "SPDXRef-Package-b00c4bf1299a6643",
+      "relationshipType": "DEPENDS_ON"
+    }
+  ]
+}

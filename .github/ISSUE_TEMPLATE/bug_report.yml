@@ -1,0 +1,56 @@
+name: Bug report
+description: TPD fails, crashes, or writes a wrong report.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. For a package whose license TPD gets wrong or can't determine, use the license detection form instead.
+        Remove private package names, internal URLs and tokens from anything you paste.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: The actual output, error or exit code.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command line
+      description: The exact command, with every option.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: sbom
+    attributes:
+      label: Minimal SBOM
+      description: The smallest SPDX SBOM that reproduces it. Real SBOMs are large; trim them, or write one by hand.
+      render: json
+  - type: input
+    id: version
+    attributes:
+      label: TPD version
+      description: Output of `thirdpartydetective --version`.
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Linux x64
+        - Linux arm64
+        - macOS, Apple silicon
+        - macOS, Intel
+        - Windows x64
+        - From source (.NET tool)
+    validations:
+      required: true

@@ -1,0 +1,299 @@
+THIRD PARTY SOFTWARE NOTICES AND INFORMATION
+============================================================
+
+This software incorporates components from the projects listed below.
+Generated on <timestamp> UTC
+
+1. Aardvark.Package 1.0.0
+   License: MIT (see Appendix A)
+
+------------------------------------------------------------
+
+2. Agpl.Package 1.0.0
+   License: AGPL-3.0-only (see Appendix A)
+
+   Note: AGPL-3.0-only is a copyleft license. Its conditions for providing source code are in Appendix A.
+
+------------------------------------------------------------
+
+3. alpha.Package 1.0.0
+   License: MIT (see Appendix A)
+
+------------------------------------------------------------
+
+4. Apache.WithLlvm 1.0.0
+   License: Apache-2.0 WITH LLVM-exception (see Appendix A)
+
+------------------------------------------------------------
+
+5. App.Purpose.Dependency 1.0.0
+   License: GPL-3.0-only (see Appendix A)
+
+   Note: GPL-3.0-only is a copyleft license. Its conditions for providing source code are in Appendix A.
+
+------------------------------------------------------------
+
+6. BlueOak.Package 1.0.0
+   License: BlueOak-1.0.0 (see Appendix A)
+
+------------------------------------------------------------
+
+7. Boost.Package 1.0.0
+   License: BSL-1.0 (see Appendix A)
+
+------------------------------------------------------------
+
+8. Combined.AndLicensed 1.0.0
+   License: MIT AND BSD-3-Clause (see Appendix A)
+
+------------------------------------------------------------
+
+9. Dual.OrLicensed 1.0.0
+   Copyright: Copyright (c) Dual Authors
+   License: MIT OR Apache-2.0 (see Appendix A)
+
+------------------------------------------------------------
+
+10. Files.Only 1.0.0
+   License: MIT AND GPL-3.0-only (see Appendix A)
+
+------------------------------------------------------------
+
+11. Gpl.WithClasspath 1.0.0
+   License: GPL-2.0-only WITH Classpath-exception-2.0 (see Appendix A)
+   Project URL: https://example.invalid/gpl-classpath
+
+------------------------------------------------------------
+
+12. Gpl3.OrLater 1.0.0
+   License: GPL-3.0-or-later (see Appendix A)
+   Project URL: https://example.invalid/gpl3
+
+   Note: GPL-3.0-or-later is a copyleft license. Its conditions for providing source code are in Appendix A.
+
+------------------------------------------------------------
+
+13. Internal.Lib 1.0.0
+   License: MIT (see Appendix A)
+
+------------------------------------------------------------
+
+14. left-pad 1.0.0
+   License: WTFPL (see Appendix A)
+
+------------------------------------------------------------
+
+15. Lgpl.Package 1.0.0
+   License: LGPL-2.1-only (see Appendix A)
+   Project URL: https://example.invalid/lgpl
+
+   Note: LGPL-2.1-only is a copyleft license. Its conditions for providing source code are in Appendix A.
+
+------------------------------------------------------------
+
+16. Lowercase.Operators 1.0.0
+   License: mit OR apache-2.0 (see Appendix A)
+
+------------------------------------------------------------
+
+17. Made.Up.License 1.0.0
+   License: Made-Up-License-1.0 (license text not available)
+
+------------------------------------------------------------
+
+18. MitZero.Package 1.0.0
+   License: MIT-0 (see Appendix A)
+
+------------------------------------------------------------
+
+19. Mpl.Package 1.0.0
+   License: MPL-2.0 (see Appendix A)
+
+------------------------------------------------------------
+
+20. MsPl.Package 1.0.0
+   License: MS-PL (see Appendix A)
+
+------------------------------------------------------------
+
+21. Nested.Expression 1.0.0
+   License: (MIT OR Apache-2.0) AND BSD-2-Clause (see Appendix A)
+
+------------------------------------------------------------
+
+22. No.License 1.0.0
+   License: not determined (NOASSERTION)
+
+------------------------------------------------------------
+
+23. None.License 1.0.0
+   License: not determined (NOASSERTION)
+
+------------------------------------------------------------
+
+24. Plain.Mit 1.0.0
+   Copyright: Copyright (c) 2020 Plain Inc
+   License: MIT (see Appendix A)
+
+------------------------------------------------------------
+
+25. Postgres.Package 1.0.0
+   License: PostgreSQL (see Appendix A)
+
+------------------------------------------------------------
+
+26. Psf.Package 1.0.0
+   License: PSF-2.0 (see Appendix A)
+
+------------------------------------------------------------
+
+27. Unlicense.Package 1.0.0
+   License: Unlicense (see Appendix A)
+
+------------------------------------------------------------
+
+28. Vendor.Proprietary 1.0.0
+   Copyright: Copyright (c) Vendor Ltd
+   License: LicenseRef-Vendor-EULA (see Appendix A)
+
+------------------------------------------------------------
+
+29. ZeroBsd.Package 1.0.0
+   License: 0BSD (see Appendix A)
+
+------------------------------------------------------------
+
+30. _underscore.Package 1.0.0
+   License: MIT (see Appendix A)
+
+------------------------------------------------------------
+
+31. Ångström.Package 1.0.0
+   License: MIT (see Appendix A)
+
+------------------------------------------------------------
+
+
+============================================================
+APPENDIX A: LICENSE TEXTS
+============================================================
+
+The following license texts apply to the packages listed above.
+Texts are sourced from the SPDX license-list-data repository (https://github.com/spdx/license-list-data),
+except LicenseRef-* texts, which come from the SBOM or the package (shown indented).
+
+--- 0BSD ---
+
+[SPDX 3.29.0 text of 0BSD]
+
+
+--- AGPL-3.0-only ---
+
+[SPDX 3.29.0 text of AGPL-3.0-only]
+
+
+--- Apache-2.0 ---
+
+[SPDX 3.29.0 text of Apache-2.0]
+
+
+--- BlueOak-1.0.0 ---
+
+[SPDX 3.29.0 text of BlueOak-1.0.0]
+
+
+--- BSD-2-Clause ---
+
+[SPDX 3.29.0 text of BSD-2-Clause]
+
+
+--- BSD-3-Clause ---
+
+[SPDX 3.29.0 text of BSD-3-Clause]
+
+
+--- BSL-1.0 ---
+
+[SPDX 3.29.0 text of BSL-1.0]
+
+
+--- Classpath-exception-2.0 ---
+
+[SPDX 3.29.0 text of Classpath-exception-2.0]
+
+
+--- GPL-2.0-only ---
+
+[SPDX 3.29.0 text of GPL-2.0-only]
+
+
+--- GPL-3.0-only ---
+
+[SPDX 3.29.0 text of GPL-3.0-only]
+
+
+--- GPL-3.0-or-later ---
+
+[SPDX 3.29.0 text of GPL-3.0-or-later]
+
+
+--- LGPL-2.1-only ---
+
+[SPDX 3.29.0 text of LGPL-2.1-only]
+
+
+--- LicenseRef-Vendor-EULA (Vendor EULA) ---
+
+   Vendor Ltd End User License Agreement. Redistribution requires written permission.
+
+
+--- LLVM-exception ---
+
+[SPDX 3.29.0 text of LLVM-exception]
+
+
+--- Made-Up-License-1.0 ---
+
+[License text for Made-Up-License-1.0 is not available.]
+
+
+--- MIT ---
+
+[SPDX 3.29.0 text of MIT]
+
+
+--- MIT-0 ---
+
+[SPDX 3.29.0 text of MIT-0]
+
+
+--- MPL-2.0 ---
+
+[SPDX 3.29.0 text of MPL-2.0]
+
+
+--- MS-PL ---
+
+[SPDX 3.29.0 text of MS-PL]
+
+
+--- PostgreSQL ---
+
+[SPDX 3.29.0 text of PostgreSQL]
+
+
+--- PSF-2.0 ---
+
+[SPDX 3.29.0 text of PSF-2.0]
+
+
+--- Unlicense ---
+
+[SPDX 3.29.0 text of Unlicense]
+
+
+--- WTFPL ---
+
+[SPDX 3.29.0 text of WTFPL]
+
+

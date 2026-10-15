@@ -1,0 +1,34 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "clean",
+  "documentNamespace": "https://example.invalid/spdx/clean",
+  "creationInfo": {
+    "creators": [
+      "Tool: hand-written fixture"
+    ],
+    "created": "2026-10-07T00:00:00Z"
+  },
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-1",
+      "name": "Plain.Mit",
+      "versionInfo": "1.0.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "Copyright (c) 2020 Plain Inc",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:nuget/Plain.Mit@1.0.0"
+        }
+      ],
+      "primaryPackagePurpose": "LIBRARY"
+    }
+  ]
+}

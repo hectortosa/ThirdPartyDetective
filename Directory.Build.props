@@ -1,0 +1,16 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- Single source of truth for the tool version. Drives PackageVersion,
+         AssemblyVersion, FileVersion and InformationalVersion (what the
+         CLI's version option prints).
+         The release workflow refuses a tag that doesn't match it. -->
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true' Or '$(GITLAB_CI)' == 'true'">
+    <!-- Reproducible CI builds: normalized source paths in PDBs and stack traces. -->
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+</Project>

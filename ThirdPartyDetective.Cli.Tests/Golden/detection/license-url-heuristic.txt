@@ -1,0 +1,15 @@
+# License URL (no expression) -> LicenseType from LicenseAnalyzer.ParseLicenseType
+https://licenses.nuget.org/MIT                                     MIT
+https://licenses.nuget.org/Apache-2.0                              Apache20
+https://licenses.nuget.org/EPL-1.0                                 Unknown
+https://licenses.nuget.org/MPL-1.1                                 Unknown
+https://licenses.nuget.org/LGPL-2.0-or-later                       LGPL21
+https://licenses.nuget.org/BSD-4-Clause                            Unknown
+https://www.gnu.org/licenses/lgpl-2.1.html                         Unknown
+https://www.gnu.org/licenses/agpl-3.0.html                         Unknown
+http://logging.apache.org/log4net/license.html                     Unknown
+http://www.antlr3.org/license.html                                 Unknown
+https://github.com/jsmith/proprietary-sdk/blob/main/EULA.txt       Unknown
+https://github.com/mitsuhiko/flask                                 Unknown
+https://vendor.example/commercial-license                          Unknown
+https://example.invalid/terms                                      Unknown

@@ -1,0 +1,246 @@
+THIRD PARTY SOFTWARE NOTICES AND INFORMATION
+============================================================
+
+This software incorporates components from the projects listed below.
+
+1. Microsoft.Extensions.Configuration 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+2. Microsoft.Extensions.Configuration.Abstractions 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+3. Microsoft.Extensions.Configuration.Binder 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+4. Microsoft.Extensions.Configuration.CommandLine 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+5. Microsoft.Extensions.Configuration.EnvironmentVariables 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+6. Microsoft.Extensions.Configuration.FileExtensions 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+7. Microsoft.Extensions.Configuration.Json 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+8. Microsoft.Extensions.Configuration.UserSecrets 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+9. Microsoft.Extensions.DependencyInjection 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+10. Microsoft.Extensions.DependencyInjection.Abstractions 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+11. Microsoft.Extensions.Diagnostics 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+12. Microsoft.Extensions.Diagnostics.Abstractions 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+13. Microsoft.Extensions.FileProviders.Abstractions 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+14. Microsoft.Extensions.FileProviders.Physical 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+15. Microsoft.Extensions.FileSystemGlobbing 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+16. Microsoft.Extensions.Hosting 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+17. Microsoft.Extensions.Hosting.Abstractions 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+18. Microsoft.Extensions.Http 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+19. Microsoft.Extensions.Logging 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+20. Microsoft.Extensions.Logging.Abstractions 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+21. Microsoft.Extensions.Logging.Configuration 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+22. Microsoft.Extensions.Logging.Console 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+23. Microsoft.Extensions.Logging.Debug 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+24. Microsoft.Extensions.Logging.EventLog 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+25. Microsoft.Extensions.Logging.EventSource 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+26. Microsoft.Extensions.Options 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+27. Microsoft.Extensions.Options.ConfigurationExtensions 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+28. Microsoft.Extensions.Primitives 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+29. System.CommandLine 2.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+30. System.Diagnostics.EventLog 10.0.13
+   Copyright: © Microsoft Corporation. All rights reserved.
+   License: MIT (see Appendix A)
+   License URL: https://licenses.nuget.org/MIT
+
+------------------------------------------------------------
+
+
+============================================================
+APPENDIX A: LICENSE TEXTS
+============================================================
+
+The following license texts apply to the packages listed above.
+Texts are sourced from the SPDX license-list-data repository (https://github.com/spdx/license-list-data),
+except LicenseRef-* texts, which come from the SBOM or the package (shown indented).
+
+--- MIT ---
+
+MIT License
+
+Copyright (c) <year> <copyright holders>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+associated documentation files (the "Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial
+portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+

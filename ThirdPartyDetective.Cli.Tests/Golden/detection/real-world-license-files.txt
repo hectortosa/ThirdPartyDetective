@@ -1,0 +1,21 @@
+# Real-world style license files -> LicenseMatcher result
+apache2-80-columns.txt             Apache-2.0
+apache2-appendix-filled.txt        Apache-2.0
+attack-apache2-plus-llvm-exception.txt (none)
+attack-apache2-plus-no-sale-clause.txt (none)
+attack-bsd3-plus-no-commercial-use.txt (none)
+attack-dual-mention-sentence.txt   (none)
+attack-eula-mentioning-lgpl.txt    (none)
+attack-gnu-title-then-notice.txt   (none)
+attack-gpl2-plus-classpath-exception.txt (none)
+attack-mit-plus-one-line.txt       (none)
+bsd3-named.txt                     BSD-3-Clause
+bsl-boost.txt                      BSL-1.0
+gpl3-after-long-preface.txt        (none)
+gpl3-notice-only.txt               (none)
+isc-typical.txt                    ISC
+lgpl3-copying-lesser.txt           LGPL-3.0-only
+mit-html-page.txt                  MIT
+mit-or-apache-dual.txt             (none)
+mit-typical.txt                    MIT
+proprietary-eula.txt               (none)

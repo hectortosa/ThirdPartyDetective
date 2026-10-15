@@ -1,0 +1,23 @@
+# Canonical SPDX texts (license-list-data v3.29.0) -> LicenseMatcher result
+# full: whole file (.nupkg licenseFile path); url: first 64 KB (license URL path)
+0BSD             full: 0BSD         url: 0BSD
+AGPL-3.0-only    full: AGPL-3.0-only url: AGPL-3.0-only
+Apache-2.0       full: Apache-2.0   url: Apache-2.0
+BSD-2-Clause     full: BSD-2-Clause url: BSD-2-Clause
+BSD-3-Clause     full: BSD-3-Clause url: BSD-3-Clause
+BSL-1.0          full: BSL-1.0      url: BSL-1.0
+CC0-1.0          full: CC0-1.0      url: CC0-1.0
+EPL-2.0          full: EPL-2.0      url: EPL-2.0
+GPL-2.0-only     full: GPL-2.0-only url: GPL-2.0-only
+GPL-3.0-only     full: GPL-3.0-only url: GPL-3.0-only
+ISC              full: ISC          url: ISC
+LGPL-2.0-only    full: LGPL-2.0-only url: LGPL-2.0-only
+LGPL-2.1-only    full: LGPL-2.1-only url: LGPL-2.1-only
+LGPL-3.0-only    full: LGPL-3.0-only url: LGPL-3.0-only
+MIT-0            full: MIT-0        url: MIT-0
+MIT              full: MIT          url: MIT
+MPL-2.0          full: MPL-2.0      url: MPL-2.0
+MS-PL            full: MS-PL        url: MS-PL
+PostgreSQL       full: PostgreSQL   url: PostgreSQL
+Unlicense        full: Unlicense    url: Unlicense
+Zlib             full: Zlib         url: Zlib

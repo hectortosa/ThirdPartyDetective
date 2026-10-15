@@ -1,0 +1,25 @@
+version: 2
+updates:
+  # NuGet updates change the bundled assemblies: regenerate
+  # THIRD-PARTY-NOTICES.txt on the PR (CI fails until it matches).
+  - package-ecosystem: nuget
+    directory: "/"
+    schedule:
+      interval: weekly
+    groups:
+      microsoft-extensions:
+        patterns: ["Microsoft.Extensions.*"]
+      test:
+        patterns: ["xunit*", "Microsoft.NET.Test.Sdk"]
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+
+  # The SDK pinned in global.json decides the .NET runtime bundled in the
+  # standalone executables: a .NET security fix ships as a TPD patch release.
+  - package-ecosystem: dotnet-sdk
+    directory: "/"
+    schedule:
+      interval: weekly

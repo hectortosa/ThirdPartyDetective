@@ -1,0 +1,139 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+# Actions are pinned to commit SHAs (tags can be moved); Dependabot keeps them current.
+jobs:
+  build-test-pack:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+
+      - name: Restore
+        run: dotnet restore ThirdPartyDetective.sln
+
+      - name: Build
+        run: dotnet build ThirdPartyDetective.sln --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test ThirdPartyDetective.sln --configuration Release --no-build
+
+      - name: Check for vulnerable packages
+        run: |
+          set -euo pipefail
+          dotnet list ThirdPartyDetective.sln package --vulnerable --include-transitive | tee vulnerable.txt
+          if grep -q "has the following vulnerable packages" vulnerable.txt; then
+            echo "::error::Vulnerable packages found"
+            exit 1
+          fi
+
+      - name: Pack
+        run: dotnet pack ThirdPartyDetective.Cli/ThirdPartyDetective.Cli.csproj --configuration Release --no-build --output artifacts
+
+      - name: Check package contents
+        run: |
+          set -euo pipefail
+          listing=$(unzip -l artifacts/*.nupkg)
+          for required in LICENSE README.md THIRD-PARTY-NOTICES.txt tools/net10.0/any/ThirdPartyDetective.dll; do
+            grep -q "$required" <<<"$listing" || { echo "::error::$required missing from the package"; exit 1; }
+          done
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: nupkg
+          path: artifacts/*.nupkg
+          if-no-files-found: error
+          retention-days: 14
+
+  # THIRD-PARTY-NOTICES.txt ships inside the package, so it must match the
+  # dependencies being built. A dependency update fails here until the file is
+  # regenerated with scripts/generate-third-party-notices.sh.
+  third-party-notices:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+
+      - uses: aquasecurity/setup-trivy@81e514348e19b6112ce2a7e3ecbafe19c1e1f567 # v0.3.1
+        with:
+          version: v0.75.0
+
+      - name: Regenerate and compare
+        run: |
+          set -euo pipefail
+          scripts/generate-third-party-notices.sh "$RUNNER_TEMP/THIRD-PARTY-NOTICES.txt"
+          if ! diff -u THIRD-PARTY-NOTICES.txt "$RUNNER_TEMP/THIRD-PARTY-NOTICES.txt"; then
+            echo "::error::THIRD-PARTY-NOTICES.txt is out of date. Run scripts/generate-third-party-notices.sh THIRD-PARTY-NOTICES.txt and commit the result."
+            exit 1
+          fi
+
+  # The release ships standalone executables; this builds the linux-x64 one and
+  # checks it writes the same reports as the framework-dependent build (with ICU
+  # on). The Release workflow repeats this on every platform.
+  standalone:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          global-json-file: global.json
+
+      - name: Build the executable and its archive
+        run: scripts/build-standalone.sh linux-x64 dist
+
+      - name: Same reports as the framework-dependent build
+        run: |
+          set -euo pipefail
+          dotnet build ThirdPartyDetective.Cli/ThirdPartyDetective.Cli.csproj --configuration Release \
+            -p:InvariantGlobalization=false --output "$RUNNER_TEMP/reference" --nologo
+          mkdir -p "$RUNNER_TEMP/standalone"
+          tar -xzf dist/*.tar.gz -C "$RUNNER_TEMP/standalone"
+          for required in thirdpartydetective LICENSE README.md THIRD-PARTY-NOTICES.txt DOTNET-RUNTIME-LICENSE.txt DOTNET-RUNTIME-THIRD-PARTY-NOTICES.txt; do
+            [ -f "$RUNNER_TEMP/standalone/$required" ] || { echo "::error::$required missing from the archive"; exit 1; }
+          done
+          "$RUNNER_TEMP/standalone/thirdpartydetective" --version
+          scripts/check-standalone.sh "$RUNNER_TEMP/reference/ThirdPartyDetective.dll" "$RUNNER_TEMP/standalone/thirdpartydetective"
+
+  lint-workflows:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: actionlint
+        run: |
+          set -euo pipefail
+          curl -fsSL -o "$RUNNER_TEMP/actionlint.tar.gz" \
+            https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_linux_amd64.tar.gz
+          echo "8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8  $RUNNER_TEMP/actionlint.tar.gz" | sha256sum --check
+          tar -xzf "$RUNNER_TEMP/actionlint.tar.gz" -C "$RUNNER_TEMP" actionlint
+          "$RUNNER_TEMP/actionlint" -color

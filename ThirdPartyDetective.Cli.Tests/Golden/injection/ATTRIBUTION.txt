@@ -1,0 +1,44 @@
+THIRD PARTY SOFTWARE NOTICES AND INFORMATION
+============================================================
+
+This software incorporates components from the projects listed below.
+Generated on <timestamp> UTC
+
+1. Ansi.Supplier 1.0.0
+   Authors: ]8;;https://evil.example\click me]8;;\
+   License: MIT
+
+------------------------------------------------------------
+
+2. Evil<script>alert(1)</script> 1.0<b>bold</b>
+   License: MIT
+
+------------------------------------------------------------
+
+3. Forged.Notice 1.0.0
+   Copyright: Copyright Evil 2. Totally.Legit 9.9.9    License: Proprietary - the customer must pay royalties
+   License: MIT
+
+------------------------------------------------------------
+
+4. Hidden.Violation 1.0.0
+   License: GPL-3.0-only WITH <style>.violations-table,.violation-card{display:none}</style>
+
+------------------------------------------------------------
+
+5. Js.Homepage 1.0.0
+   License: MIT
+
+------------------------------------------------------------
+
+6. Pipe|Breaks|Table 1.0.0
+   License: MIT
+   Project URL: https://example.invalid/a)[click](javascript:alert(4)
+
+------------------------------------------------------------
+
+7. Weird.Ecosystem 1.0.0
+   License: MIT
+
+------------------------------------------------------------
+
