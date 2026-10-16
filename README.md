@@ -6,6 +6,8 @@
 ![Ecosystems: NuGet, npm, PyPI](https://img.shields.io/badge/ecosystems-NuGet%20%7C%20npm%20%7C%20PyPI-555555)
 ![License: MIT](https://img.shields.io/badge/license-MIT-3a7b33)
 
+**Website:** [hectortosa.github.io/ThirdPartyDetective](https://hectortosa.github.io/ThirdPartyDetective/)
+
 ThirdPartyDetective (TPD) turns the SBOM your security tooling already produces into the third-party notices you ship with your software, and checks every dependency's license against how you deploy it.
 
 It reads SPDX 2.2/2.3 JSON from Trivy, Syft or Microsoft.Sbom.Tool, resolves what the SBOM leaves open from the NuGet, npm and PyPI registries, and writes an `ATTRIBUTION.txt` plus Markdown, JSON and HTML reports. It is a single executable for Linux, macOS and Windows, with no native scanning and no dependency on your package managers or a .NET installation.

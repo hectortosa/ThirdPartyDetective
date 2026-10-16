@@ -31,6 +31,7 @@ CI (`.github/workflows/ci.yml`) builds and tests in Release, fails on vulnerable
 
 - `ThirdPartyDetective.Cli/` is the tool (System.CommandLine, Microsoft.Extensions.Hosting/Http); `ThirdPartyDetective.Cli.Tests/` is xUnit. They are the only projects in `ThirdPartyDetective.sln`.
 - The version is set once, as `<Version>` in `Directory.Build.props`, and read at runtime through `ToolVersion.Current`.
+- `site/` is the static website, published to GitHub Pages by `.github/workflows/pages.yml`. Its dot field embeds the package list from the npm, Python and Trivy registry golden files; refresh it when those change. Fonts are self-hosted under `site/fonts/` with their OFL licenses, so the site makes no third-party requests except the GitHub API call for the latest version.
 
 ## Architecture
 
