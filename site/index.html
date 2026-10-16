@@ -69,7 +69,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 .stage { max-width: 1120px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 30px; }
 .m-intro { font: 14px/1.7 var(--mono); color: var(--fg); max-width: 74ch; margin: 0; }
 .m-intro .label { display: block; color: var(--dim); margin-bottom: 6px; }
-.m-head { font: 800 clamp(46px, 9vw, 112px)/0.9 var(--wide); font-stretch: 62%; text-transform: uppercase; letter-spacing: -0.01em; margin: 34px 0 0; color: var(--white); }
+.m-head { font: 800 clamp(46px, min(9vw, 13vh), 150px)/0.9 var(--wide); font-stretch: 62%; text-transform: uppercase; letter-spacing: -0.01em; margin: 34px 0 0; color: var(--white); }
 .m-head .t { color: var(--teal); }
 .m-items, .m-labels { display: none; }
 .m-final { margin-top: 22px; max-width: 560px; }
@@ -443,37 +443,34 @@ thirdpartydetective --sbom app.spdx.json --mode distribution \
     // Start: the explanation at the top, the entries in columns below it.
     intro.style.left = x0 + "px"; intro.style.top = (narrow ? 22 : 40) + "px"; intro.style.width = Math.min(cw, 760) + "px";
     restore(introNodes);
-    var lineH = narrow ? 17 : 19, listTop = (narrow ? 22 : 40) + intro.offsetHeight + 18;
-    var cols = narrow ? 1 : 2, gapC = 32, colW = (cw - gapC * (cols - 1)) / cols;
-    var rows = Math.ceil(items.length / cols);
-    listBottom = listTop + rows * lineH; stageH = H;
+    // One column, like the file itself. Lines grow with the screen's height, so
+    // the list always runs past the bottom and the drift keeps revealing it.
+    var lineH = narrow ? 17 : clamp(Math.round(H / 40), 19, 28), fontSize = narrow ? 11.5 : Math.round(lineH * 1.32) / 2;
+    var listTop = (narrow ? 22 : 40) + intro.offsetHeight + 18, colW = narrow ? cw : Math.min(cw, 860);
+    listBottom = listTop + items.length * lineH; stageH = H;
     items.forEach(function (it, i) {
-      it.from = { x: x0 + Math.floor(i / rows) * (colW + gapC), y: listTop + (i % rows) * lineH, w: colW, h: lineH };
+      it.el.style.fontSize = fontSize + "px"; it.el.style.lineHeight = lineH + "px";
+      it.from = { x: x0, y: listTop + i * lineH, w: colW, h: lineH };
     });
 
-    // End: the headline and the field of dots, with the readout below.
-    head.style.left = x0 + "px"; head.style.width = (narrow ? cw : cw * 0.46) + "px";
+    // End, on every screen: the headline, the field of dots below it, then the
+    // readout, centred together. Wide screens get a wide band of dots.
+    head.style.left = x0 + "px"; head.style.width = cw + "px";
     restore(headNodes);
     var headH = head.offsetHeight;
-    finalEl.style.width = (narrow ? cw : cw * 0.48) + "px";
-    var finalH = finalEl.offsetHeight + 18, field;
-    if (narrow) {
-      head.style.top = "22px";
-      var fy = 22 + headH + 24;
-      field = { x: x0, y: fy, w: cw, h: H - fy - finalH - 16 };
-    } else {
-      head.style.top = Math.max(30, (H - headH) / 2) + "px";
-      field = { x: x0 + cw * 0.52, y: Math.max(40, H * 0.14), w: cw * 0.48, h: H * 0.86 - Math.max(40, H * 0.14) - finalH - 30 };
-    }
-    var per = narrow ? [9, 9, 9] : [4, 8, 4], labelH = 22, g;
-    if (narrow) {
-      var rowsTotal = groups.reduce(function (n, gr, gi) { return n + Math.ceil(gr.items.length / per[gi]); }, 0);
-      g = Math.min(field.w / 9, (field.h - groups.length * (labelH + 10)) / rowsTotal);
-    } else {
-      var maxRows = Math.max.apply(null, groups.map(function (gr, gi) { return Math.ceil(gr.items.length / per[gi]); }));
-      g = Math.min(field.w / (per[0] + per[1] + per[2] + 2.4), (field.h - labelH) / maxRows);
-    }
-    g = clamp(g, 14, 36);
+    finalEl.style.width = Math.min(cw, 620) + "px";
+    var finalH = finalEl.offsetHeight, edge = narrow ? 22 : 40, gapHF = narrow ? 24 : 40, labelH = 22;
+    var per = narrow ? [9, 9, 9] : [5, 12, 7];
+    var rowsOf = groups.map(function (gr, gi) { return Math.ceil(gr.items.length / per[gi]); });
+    var maxRows = Math.max.apply(null, rowsOf), sumRows = rowsOf.reduce(function (n, r) { return n + r; }, 0);
+    var room = H - 2 * edge - headH - gapHF - 18 - finalH, g;
+    if (narrow) g = Math.min(cw / 9, (room - groups.length * (labelH + 10)) / sumRows);
+    else g = Math.min(cw / (per[0] + per[1] + per[2] + 2.4), (room - labelH) / maxRows);
+    g = clamp(g, 14, 44);
+    var fieldH = narrow ? groups.length * (labelH + 10) - 10 + sumRows * g : labelH + maxRows * g;
+    var top = Math.max(edge, (H - (headH + gapHF + fieldH + 18 + finalH)) / 2);
+    head.style.top = top + "px";
+    var field = { x: x0, y: top + headH + gapHF };
     var d = Math.round(g * 0.66), gx = field.x, gy = field.y, bottom = field.y;
     groups.forEach(function (gr, gi) {
       var lx = narrow ? field.x : gx, ly = narrow ? gy : field.y;
@@ -483,16 +480,9 @@ thirdpartydetective --sbom app.spdx.json --mode distribution \
         it.to = { x: lx + (i % per[gi]) * g, y: ly + labelH + Math.floor(i / per[gi]) * g, d: d };
         bottom = Math.max(bottom, it.to.y + d);
       });
-      if (narrow) gy = ly + labelH + Math.ceil(gr.items.length / per[gi]) * g + 10;
+      if (narrow) gy = ly + labelH + rowsOf[gi] * g + 10;
       else gx += per[gi] * g + 1.2 * g;
     });
-    // On wide screens, centre the field and its readout against the headline.
-    var shift = narrow ? 0 : Math.max(30, (H - (bottom - field.y + 18 + finalEl.offsetHeight)) / 2) - field.y;
-    if (shift) {
-      items.forEach(function (it) { it.to.y += shift; });
-      groups.forEach(function (gr) { gr.label.style.top = (parseFloat(gr.label.style.top) + shift) + "px"; });
-      bottom += shift;
-    }
     finalEl.style.left = field.x + "px"; finalEl.style.top = (bottom + 18) + "px";
     lastP = -1;
     render(progress());
