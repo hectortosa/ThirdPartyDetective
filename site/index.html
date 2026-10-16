@@ -443,12 +443,14 @@ thirdpartydetective --sbom app.spdx.json --mode distribution \
     // Start: the explanation at the top, the entries in columns below it.
     intro.style.left = x0 + "px"; intro.style.top = (narrow ? 22 : 40) + "px"; intro.style.width = Math.min(cw, 760) + "px";
     restore(introNodes);
-    var lineH = narrow ? 17 : 19, listTop = (narrow ? 22 : 40) + intro.offsetHeight + 18;
-    var cols = narrow ? 1 : 2, gapC = 32, colW = (cw - gapC * (cols - 1)) / cols;
-    var rows = Math.ceil(items.length / cols);
-    listBottom = listTop + rows * lineH; stageH = H;
+    // One column, like the file itself. Lines grow with the screen's height, so
+    // the list always runs past the bottom and the drift keeps revealing it.
+    var lineH = narrow ? 17 : clamp(Math.round(H / 40), 19, 28), fontSize = narrow ? 11.5 : Math.round(lineH * 1.32) / 2;
+    var listTop = (narrow ? 22 : 40) + intro.offsetHeight + 18, colW = narrow ? cw : Math.min(cw, 860);
+    listBottom = listTop + items.length * lineH; stageH = H;
     items.forEach(function (it, i) {
-      it.from = { x: x0 + Math.floor(i / rows) * (colW + gapC), y: listTop + (i % rows) * lineH, w: colW, h: lineH };
+      it.el.style.fontSize = fontSize + "px"; it.el.style.lineHeight = lineH + "px";
+      it.from = { x: x0, y: listTop + i * lineH, w: colW, h: lineH };
     });
 
     // End: the headline and the field of dots, with the readout below.
